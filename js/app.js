@@ -39,7 +39,7 @@
                     if(resSrcs.length>i-1)
                         if(resSrcs[i-1]!="")text+='<section  style="box-sizing:border-box;" >' +
                             '<section class="" style="text-align:center;margin-top: 10px;margin-bottom:10px;box-sizing: border-box;">' +
-                            '<img class="" data-ratio="0.7765625" data-w="640" src="'+resSrcs[i-1]+'" style="max-width: 100%; vertical-align: middle; box-sizing: border-box;"  />' +
+                            '<img class="" data-ratio="0.7765625" data-w="640" src="'+resSrcs[i-1]+'" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;"  />' +
                             '</section>' +
                             '</section>';
                 text+=textSpls[i];
