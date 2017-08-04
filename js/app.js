@@ -1,4 +1,13 @@
 (function(){
+
+    window.onload=function () {
+        var scrolls=document.getElementsByClassName("scrollWrapper");
+        console.log(scrolls.length);
+        for(var i=0;i<scrolls.length;i++){
+            scrolls[i].style.height=document.body.clientHeight-5+'px';
+        }
+    }
+
     var app=angular.module("main",[]);
     app.filter('trust2Html', ['$sce',function($sce) {
         return function(val) {
@@ -16,6 +25,9 @@
         this.artiResSrc=window.localStorage.getItem("artiResSrc");
         if(!this.artiResSrc)
             this.artiResSrc="";
+        this.artiCredit=window.localStorage.getItem("artiCredit");
+        if(!this.artiCredit)
+            this.artiCredit="运维 / 鱼";
 
         this.getMainHtml=function () {
             var text=this.mainHtml;
@@ -37,9 +49,12 @@
             var mainTxt=textSpls[0];
             for(var i=1;i<textSpls.length;i++)mainTxt+=(i%2==0?'</em>':'<em style="font-size:12px;font-style: normal">')+textSpls[i];
 
-
-            mainTxt=mainTxt.replace("\n_PIC\n","<!--IMG-->");
-
+            var pmt="";
+            while(pmt!=mainTxt) {
+                pmt=mainTxt;
+                mainTxt = mainTxt.replace("\n_PIC\n", "<!--IMG-->");
+            }
+            mainTxt = mainTxt.replace("\n_PIC", "<!--IMG-->");
             var paras=mainTxt.split('\n');
             var mainTxtHtml="";
             for(var i=0;i<paras.length;i++){
@@ -47,7 +62,20 @@
                 mainTxtHtml+='<p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">'+paras[i]+'</p>';
             }
 
+            var txtCredit=this.artiCredit;
+            var creditHtml="";
+            for(var i=0;i<this.artiCredit.length;i++)
+                if(this.artiCredit[i]==' ')creditHtml+='&nbsp';else creditHtml+=this.artiCredit[i];
+
+            paras=creditHtml.split('\n');
+            creditHtml="";
+            for(var i=0;i<paras.length;i++){
+                if(paras[i].trim().length==0)paras[i]='&nbsp;';
+                creditHtml+='<p style="box-sizing: border-box;">'+paras[i]+'</p>';
+            }
+
             text=text.replace("<!--MAINTXT-->",mainTxtHtml);
+            text=text.replace("<!--CREDIT-->",creditHtml);
             var resSrcs=this.artiResSrc.split('\n');
             textSpls=text.split("<!--IMG-->");
             text=textSpls[0];
@@ -64,6 +92,7 @@
             window.localStorage.setItem("artiTitle",this.artiTitle);
             window.localStorage.setItem("artiMaintxt",this.artiMaintxt);
             window.localStorage.setItem("artiResSrc",this.artiResSrc);
+            window.localStorage.setItem("artiCredit",this.artiCredit);
             return text;
         }
     }]);

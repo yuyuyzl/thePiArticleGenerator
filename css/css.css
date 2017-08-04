@@ -19,3 +19,7 @@ html{
     -ms-user-select: all;
     -webkit-user-select: all;
 }
+.scrollWrapper{
+    overflow-y: auto;
+    max-height: 100%;
+}

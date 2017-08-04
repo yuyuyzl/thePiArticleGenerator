@@ -74,7 +74,7 @@ var template=heredoc(function(){/*
     </section>
     </section>
     </section>
-    <section  style="   box-sizing: border-box; " ><!--IMG--></section>
+
     <section  style="   box-sizing: border-box; " >
     <section class="" style=" margin: 0.5em 0px;  box-sizing: border-box; ">
     <section class="" style="background-color: rgb(0, 0, 0); height: 1px; box-sizing: border-box;">
@@ -88,10 +88,10 @@ var template=heredoc(function(){/*
 </section>
 </section>
 </section>
-<section  style="   box-sizing: border-box; " ><!--IMG--></section>
+<section   style="text-align:center;margin-top: -18px;margin-bottom:-18px;box-sizing: border-box;" ><!--IMG--></section>
     <section  style="   box-sizing: border-box; " >
     <section class="" style=" text-align: center; margin-top: 10px; margin-bottom: 10px;  box-sizing: border-box; ">
-    <img class="" data-ratio="0.6664786" data-w="3544" src="http://mmbiz.qpic.cn/mmbiz_png/57HD4icNxRcVdbREfgOeobibdNz1G0uafA70z5HJiauHxnAxHt6ZibRYtbyNJcdybvicQVNlOtIroEcJibTJGAxicXaQA/0?wx_fmt=gif" style="max-width: 100%; vertical-align: middle; box-sizing: border-box;"  />
+    <img class="" data-ratio="0.6664786" data-w="3544" src="http://mmbiz.qpic.cn/mmbiz_png/57HD4icNxRcVdbREfgOeobibdNz1G0uafA70z5HJiauHxnAxHt6ZibRYtbyNJcdybvicQVNlOtIroEcJibTJGAxicXaQA/0?wx_fmt=gif" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;" />
     </section>
     </section>
     </section>
