@@ -24,23 +24,39 @@
                 titleHtml+='<p style="margin: 0px; padding: 0px; box-sizing: border-box;">'+this.artiTitle[i]+'<br style="box-sizing: border-box;"/></p>'
             }
             text=text.replace("<!--TITLE-->",titleHtml);
-            var paras=this.artiMaintxt.split('\n');
+
+            var textSpls=this.artiMaintxt.split("**");
+            var mainTxt=textSpls[0];
+            for(var i=1;i<textSpls.length;i++)mainTxt+=(i%2==0?'</b>':'<b>')+textSpls[i];
+
+            textSpls=mainTxt.split("__");
+            var mainTxt=textSpls[0];
+            for(var i=1;i<textSpls.length;i++)mainTxt+=(i%2==0?'</em>':'<em style="color: #AAA;font-style: normal">')+textSpls[i];
+
+            textSpls=mainTxt.split("^^");
+            var mainTxt=textSpls[0];
+            for(var i=1;i<textSpls.length;i++)mainTxt+=(i%2==0?'</em>':'<em style="font-size:12px;font-style: normal">')+textSpls[i];
+
+
+            mainTxt=mainTxt.replace("\n_PIC\n","<!--IMG-->");
+
+            var paras=mainTxt.split('\n');
             var mainTxtHtml="";
             for(var i=0;i<paras.length;i++){
                 if(paras[i].trim().length==0)paras[i]='&nbsp;';
                 mainTxtHtml+='<p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">'+paras[i]+'</p>';
             }
+
             text=text.replace("<!--MAINTXT-->",mainTxtHtml);
             var resSrcs=this.artiResSrc.split('\n');
-            var textSpls=text.split("<!--IMG-->");
+            textSpls=text.split("<!--IMG-->");
             text=textSpls[0];
             for(var i=1;i<textSpls.length;i++){
                 if(resSrcs!=null)
                     if(resSrcs.length>i-1)
-                        if(resSrcs[i-1]!="")text+='<section  style="box-sizing:border-box;" >' +
-                            '<section class="" style="text-align:center;margin-top: 10px;margin-bottom:10px;box-sizing: border-box;">' +
-                            '<img class="" data-ratio="0.7765625" data-w="640" src="'+resSrcs[i-1]+'" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;"  />' +
-                            '</section>' +
+                        if(resSrcs[i-1]!="")text+=
+                            '<section class="" style="text-align:center;margin-top: 24px;margin-bottom:24px;box-sizing: border-box;">' +
+                            '<img class="" src="'+resSrcs[i-1]+'" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;"  />' +
                             '</section>';
                 text+=textSpls[i];
             }

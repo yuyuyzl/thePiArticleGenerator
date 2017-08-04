@@ -74,26 +74,7 @@ var template=heredoc(function(){/*
     </section>
     </section>
     </section>
-    <section  style="   box-sizing: border-box; " >
-    <section class="" style="   box-sizing: border-box; ">
-    <section class="" style="text-align: justify; font-size: 14px; line-height: 2; color: rgb(160, 160, 160); box-sizing: border-box;">
-    <p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">
-    这是一部言情小说的番外《年青的时候》的一部分，原文由三个片段组成，这里截取的是情节相对独立完整的第三段。</p>
-<p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">
-    给土拨鼠，这首歌也是为她选的。</p>
-<p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">
-    我爱你，永远爱你。</p>
-<p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">
-    <br style="box-sizing: border-box;"  />
-    </p>
-    </section>
-    </section>
-    </section>
-    <section  style="   box-sizing: border-box; " >
-    <section class="" style=" text-align: center; margin-top: 10px; margin-bottom: 10px;  box-sizing: border-box; ">
-    <img class="" data-ratio="0.571875" data-w="640" data-src="http://mmbiz.qpic.cn/mmbiz_jpg/57HD4icNxRcVdbREfgOeobibdNz1G0uafAQuxt6XOqspODGNOU4icnpFeUKEZHllaBwrpB7YS3EibSGeekdTia8AJDA/0?wx_fmt=jpeg" style="max-width: 100%; vertical-align: middle; box-sizing: border-box;"  />
-    </section>
-    </section>
+    <section  style="   box-sizing: border-box; " ><!--IMG--></section>
     <section  style="   box-sizing: border-box; " >
     <section class="" style=" margin: 0.5em 0px;  box-sizing: border-box; ">
     <section class="" style="background-color: rgb(0, 0, 0); height: 1px; box-sizing: border-box;">
@@ -103,22 +84,11 @@ var template=heredoc(function(){/*
     <section  style="   box-sizing: border-box; " >
     <section class="" style="   box-sizing: border-box; ">
     <section class="" style="text-align: center; line-height: 1.3; color: rgb(160, 160, 160); font-size: 10px; box-sizing: border-box;">
-    <p style="margin: 0px; padding: 0px; box-sizing: border-box;">
-    编辑 / 斐多</p>
-    <p style="margin: 0px; padding: 0px; box-sizing: border-box;">
-    排版 / 连翘</p>
-    <p style="margin: 0px; padding: 0px; box-sizing: border-box;">
-    图片 / 网络</p>
-    <p style="margin: 0px; padding: 0px; box-sizing: border-box;">
-    音乐 /&nbsp;《Million Dollar Man》 by Lana Del Rey</p>
+<!--CREDIT-->
 </section>
 </section>
 </section>
-<section  style="   box-sizing: border-box; " >
-    <section class="" style=" text-align: center; margin-top: 10px; margin-bottom: 10px;  box-sizing: border-box; ">
-    <img class="" data-ratio="0.7765625" data-w="640" data-src="http://mmbiz.qpic.cn/mmbiz_jpg/57HD4icNxRcVax8GE4qXAnZVL5yecyNGjIzGghTR5IxFdEweciaJwW0yjic2u7TNl8FpTDCoXN7IiaTwnakFv9Et9Q/0?wx_fmt=jpeg" style="max-width: 100%; vertical-align: middle; box-sizing: border-box;"  />
-    </section>
-    </section>
+<section  style="   box-sizing: border-box; " ><!--IMG--></section>
     <section  style="   box-sizing: border-box; " >
     <section class="" style=" text-align: center; margin-top: 10px; margin-bottom: 10px;  box-sizing: border-box; ">
     <img class="" data-ratio="0.6664786" data-w="3544" src="http://mmbiz.qpic.cn/mmbiz_png/57HD4icNxRcVdbREfgOeobibdNz1G0uafA70z5HJiauHxnAxHt6ZibRYtbyNJcdybvicQVNlOtIroEcJibTJGAxicXaQA/0?wx_fmt=gif" style="max-width: 100%; vertical-align: middle; box-sizing: border-box;"  />
