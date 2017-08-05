@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%" ng-app="main" ng-controller="mainController as mc">
+<head>
+    <meta name="referrer" content="never">
+    <meta charset="UTF-8">
+    <title>thePi - Pic Generator</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/appPicGen.js"></script>
+    <script src="js/template.js"></script>
+</head>
+<body style="height: 100%;width: 100%">
+<table style="height: 100%;width: 100%">
+    <tr>
+        <td width="60%" >
+
+
+
+
+            <div class="scrollWrapper" style="min-width:690px;margin: auto">
+                <img src="img/mpTemplate.png" id="imgMpTemp" style="display: none">
+                <canvas id="cvsMp" width="1000px" height="571px"></canvas>
+                <p ng-bind="mc.doRefresh()" style="display: none"></p>
+            </div>
+        </td>
+
+        <td width="100%" height="100%">
+            <div class="scrollWrapper">
+
+                <p>写手名字</p>
+                <input type="text" ng-model="mc.authorName" style="width:auto;">
+                <p>个性签名</p>
+                <textarea type="text" ng-model="mc.authorTxt" style="width:70%;height: 300px"></textarea>
+
+                <div class="content" style="max-height:200px;">
+                    <div id="div4bm">
+                        <!--input[button] 触发 file click事件-->
+                        <input type="button" value="选择文件" id="mybutton" class="mybtn"  onclick="Id('file').click();" />
+                        <!--file 隐藏起来  触发onchange事件-->
+                        <input type="file" name="file" accept="image/png,image/jpg,image/jpeg"  id="file" onchange="changeToop();" style="display:none;" />
+                    </div>
+                    <!--图片展示区域-->
+                    <div style="float:left;">
+                        <!--设置默认图片-->
+                        <img id="myimg" src="" style=""/>
+                    </div>
+                </div>
+            </div>
+        </td>
+
+    </tr>
+</table>
+</body>
+</html>
