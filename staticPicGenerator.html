@@ -20,6 +20,8 @@
             <div class="scrollWrapper" style="min-width:690px;margin: auto">
                 <img src="img/mpTemplate.png" id="imgMpTemp" style="display: none">
                 <canvas id="cvsMp" width="1000px" height="571px"></canvas>
+                <img src="img/covTemplate.png" id="imgCovTemp" style="display: none">
+                <canvas id="cvsCov" width="900px" height="500px"></canvas>
                 <p ng-bind="mc.doRefresh()" style="display: none"></p>
             </div>
         </td>
@@ -33,16 +35,25 @@
                 <textarea type="text" ng-model="mc.authorTxt" style="width:70%;height: 300px"></textarea>
 
                 <div class="content" style="max-height:200px;">
-                    <div id="div4bm">
-                        <!--input[button] 触发 file click事件-->
-                        <input type="button" value="选择文件" id="mybutton" class="mybtn"  onclick="Id('file').click();" />
-                        <!--file 隐藏起来  触发onchange事件-->
-                        <input type="file" name="file" accept="image/png,image/jpg,image/jpeg"  id="file" onchange="changeToop();" style="display:none;" />
+                    <div>
+
+                        作者头像&nbsp;<input type="button" value="选择文件"  onclick="Id('filePicHead').click();"/>
+                        <input type="file" accept="image/png,image/jpg,image/jpeg"  id="filePicHead" onchange="changeToop('filePicHead','imgPicHead');" style="display:none;" />
                     </div>
-                    <!--图片展示区域-->
                     <div style="float:left;">
-                        <!--设置默认图片-->
-                        <img id="myimg" src="" style=""/>
+                        <img id="imgPicHead" src="" style="display: none"/>
+                    </div>
+                </div>
+                <p>封面文字</p>
+                <textarea type="text" ng-model="mc.coverTxt" style="width:70%;height: 300px"></textarea>
+
+                <div class="content" style="max-height:200px;">
+                    <div>
+                        封面背景&nbsp;<input type="button" value="选择文件"  onclick="Id('fileCovBkg').click();"/>
+                        <input type="file" accept="image/png,image/jpg,image/jpeg"  id="fileCovBkg" onchange="changeToop('fileCovBkg','imgCovBkg');" style="display:none;" />
+                    </div>
+                    <div style="float:left;">
+                        <img id="imgCovBkg" src="" style="display: none;"/>
                     </div>
                 </div>
             </div>
