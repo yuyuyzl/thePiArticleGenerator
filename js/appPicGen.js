@@ -7,7 +7,7 @@
         };
     }]);
     app.controller("mainController",['$sce','$q','$scope','$timeout','$filter',function($sce,$q,$scope,$timeout,$filter){
-        this.authorName="良岳";
+        this.authorName="";
         this.authorTxt="";
         this.coverTxt="";
         this.doRefresh=function () {
@@ -19,6 +19,18 @@
     }]);
 })();
 
+
+window.onload=function () {
+    var waitTillLoad=function () {
+        //console.log("waiting...");
+        var img1 = document.getElementById("imgMpTemp");
+        var img2 = document.getElementById("imgCovTemp");
+        if(img1.width!=0 && img2.width!=0)doRefresh();
+        else setTimeout(waitTillLoad,10);
+    };
+    setTimeout(waitTillLoad,10);
+
+};
 
 function Id(id){
     return document.getElementById(id);
