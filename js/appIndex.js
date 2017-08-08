@@ -29,6 +29,14 @@
         if(!this.artiCredit)
             this.artiCredit="运维 / 鱼";
 
+        this.clear=function (){
+            if(confirm("确定要清空全部吗？")) {
+                this.artiTitle = "标题";
+                this.artiMaintxt = "";
+                this.artiResSrc = "";
+                this.artiCredit = "运维 / 鱼";
+            }
+        }
         this.getMainHtml=function () {
             var text=this.mainHtml;
             var titleHtml="";
@@ -85,12 +93,13 @@
             textSpls=text.split("<!--IMG-->");
             text=textSpls[0];
             for(var i=1;i<textSpls.length;i++){
-                if(resSrcs!=null)
-                    if(resSrcs.length>i-1)
-                        if(resSrcs[i-1]!="")text+=
-                            '<section class="" style="text-align:center;margin-top: 24px;margin-bottom:24px;box-sizing: border-box;">' +
-                            '<img class="" src="'+resSrcs[i-1]+'" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;"  />' +
-                            '</section>';
+                if (resSrcs != null && resSrcs.length > i - 1 && resSrcs[i - 1] != "") text +=
+                    '<section class="" style="text-align:center;margin-top: 24px;margin-bottom:24px;box-sizing: border-box;">' +
+                    '<img class="" src="' + resSrcs[i - 1] + '" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;"  />' +
+                    '</section>';
+                else text +=
+                    '<section class="" style="text-align:center;margin-top: 24px;margin-bottom:24px;box-sizing: border-box;">' +
+                    '</section>';
                 text+=textSpls[i];
             }
 
