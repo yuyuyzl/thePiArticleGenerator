@@ -49,16 +49,21 @@
             var mainTxt=textSpls[0];
             for(var i=1;i<textSpls.length;i++)mainTxt+=(i%2==0?'</em>':'<em style="font-size:12px;font-style: normal">')+textSpls[i];
 
-            var pmt="";
-            while(pmt!=mainTxt) {
-                pmt=mainTxt;
-                mainTxt = mainTxt.replace("\n_PIC\n", "<!--IMG-->");
-            }
-            mainTxt = mainTxt.replace("\n_PIC", "<!--IMG-->");
             var paras=mainTxt.split('\n');
             var mainTxtHtml="";
             for(var i=0;i<paras.length;i++){
                 if(paras[i].trim().length==0)paras[i]='&nbsp;';
+                if(paras[i].substring(0,4)=='_PIC'){
+                    var isrc=paras[i].substring(4);
+                    if(isrc!="") {
+                        mainTxtHtml +=
+                            '<section class="" style="text-align:center;margin-top: 24px;margin-bottom:24px;box-sizing: border-box;">' +
+                            '<img class="" src="' + isrc + '" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;"  />' +
+                            '</section>';
+                    }else{
+                        mainTxtHtml+="\n<!--IMG-->\n"
+                    }
+                }else
                 mainTxtHtml+='<p style="white-space: normal; margin: 0px; padding: 0px; box-sizing: border-box;">'+paras[i]+'</p>';
             }
 
