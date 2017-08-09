@@ -44,8 +44,13 @@
                 titleHtml+='<p style="margin: 0px; padding: 0px; box-sizing: border-box;">'+this.artiTitle[i]+'<br style="box-sizing: border-box;"/></p>'
             }
             text=text.replace("<!--TITLE-->",titleHtml);
-
-            var textSpls=this.artiMaintxt.split("**");
+            var mainTxt=this.artiMaintxt;
+            var pmt="";
+            while (pmt!=mainTxt){
+                pmt=mainTxt;
+                mainTxt=mainTxt.replace(" ","&nbsp;");
+            }
+            var textSpls=mainTxt.split("**");
             var mainTxt=textSpls[0];
             for(var i=1;i<textSpls.length;i++)mainTxt+=(i%2==0?'</b>':'<b>')+textSpls[i];
 
