@@ -91,8 +91,9 @@ var template=heredoc(function(){/*
 <section   style="text-align:center;margin-top: -18px;margin-bottom:-18px;box-sizing: border-box;" ><!--IMG--></section>
     <section  style="   box-sizing: border-box; " >
     <section class="" style=" text-align: center; margin-top: 10px; margin-bottom: 10px;  box-sizing: border-box; ">
-    <img class="" data-ratio="0.6664786" data-w="3544" src="http://mmbiz.qpic.cn/mmbiz_png/57HD4icNxRcVdbREfgOeobibdNz1G0uafA70z5HJiauHxnAxHt6ZibRYtbyNJcdybvicQVNlOtIroEcJibTJGAxicXaQA/0?wx_fmt=gif" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;" />
+    <img class="" data-ratio="0.6664786" data-w="3544" src="http://mmbiz.qpic.cn/mmbiz_png/57HD4icNxRcVdbREfgOeobibdNz1G0uafA70z5HJiauHxnAxHt6ZibRYtbyNJcdybvicQVNlOtIroEcJibTJGAxicXaQA/0?wx_fmt=gif" style="vertical-align: middle; box-sizing: border-box; width: 100% !important; height: auto !important; visibility: visible !important;margin-bottom:-31px;" />
     </section>
     </section>
     </section>
+    &nbsp;
 */});
