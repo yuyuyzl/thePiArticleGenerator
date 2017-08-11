@@ -29,10 +29,13 @@
         <td width="100%" height="100%">
             <div class="scrollWrapper">
 
-                <p>写手名字</p>
-                <input type="text" ng-model="mc.authorName" style="width:auto;">
+                <p>写手名字 <input type="text" ng-model="mc.authorName" style="width:auto;"></p>
+
+                <p>名字字号 <input type="text" ng-model="mc.nameSize" style="width:auto;"></p>
+
                 <p>个性签名</p>
                 <textarea type="text" ng-model="mc.authorTxt" style="width:70%;height: 300px"></textarea>
+                <p>签名字号 <input type="text" ng-model="mc.txtSize" style="width:auto;"></p>
 
                 <div class="content" style="max-height:200px;">
                     <div>
@@ -46,7 +49,7 @@
                 </div>
                 <p>封面文字</p>
                 <textarea type="text" ng-model="mc.coverTxt" style="width:70%;height: 300px"></textarea>
-
+                <p>文字字号 <input type="text" ng-model="mc.coverSize" style="width:auto;"></p>
                 <div class="content" style="max-height:200px;">
                     <div>
                         封面背景&nbsp;<input type="button" value="选择文件"  onclick="Id('fileCovBkg').click();"/>

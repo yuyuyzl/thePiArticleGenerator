@@ -10,10 +10,17 @@
         this.authorName="";
         this.authorTxt="";
         this.coverTxt="";
+        this.nameSize="56";
+        this.txtSize="30";
+        this.coverSize="";
         this.doRefresh=function () {
             authorName=this.authorName;
             authorTxt=this.authorTxt;
             coverTxt=this.coverTxt;
+            nameSize=this.nameSize;
+            txtSize=this.txtSize;
+            coverSize=this.coverSize;
+
             doRefresh();
         }
     }]);
@@ -85,10 +92,10 @@ function doRefresh() {
         var img = document.getElementById("imgMpTemp");
         ctx.drawImage(img, 0, 0);
         ctx.fillStyle = '#03125e';
-        ctx.font = "bold 56px 'Senty Golden Bell 新蒂金钟体'";
+        ctx.font = nameSize+"px 'Senty Golden Bell 新蒂金钟体'";
         ctx.fillText(authorName, 498, 239);
         ctx.fillStyle = '#92969c';
-        ctx.font = "bold 30px '宋体'";
+        ctx.font = "bold "+txtSize+"px '宋体'";
         ctx.fontStyle = "bold";
         var txtLs = authorTxt.split("\n");
         for (var i = 0; i < txtLs.length; i++)
@@ -122,7 +129,11 @@ function doRefresh() {
                     break;
                 }
         }
+        if(coverSize && coverSize!="") {
+            ctx.font = coverSize + "px 'Senty Golden Bell 新蒂金钟体'";
+            fontSz = parseInt(coverSize);
+        }
         for (var i = 0; i < txtLs.length; i++)
-            ctx.fillText(txtLs[i], 570-ctx.measureText(txtLs[i]).width/2, 265-(txtLs.length-1)*4-(48-fontSz)/2-(56-(txtLs.length-1)*8)*(txtLs.length-1)/2 + 56 * i);
+            ctx.fillText(txtLs[i], 570-ctx.measureText(txtLs[i]).width/2, 265-(txtLs.length-1)*4-(48-fontSz)*0.4-(56-(txtLs.length-1)*8)*(txtLs.length-1)/2 + 56 * i);
     }
 }
