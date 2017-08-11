@@ -85,7 +85,7 @@ function doRefresh() {
         var img = document.getElementById("imgMpTemp");
         ctx.drawImage(img, 0, 0);
         ctx.fillStyle = '#03125e';
-        ctx.font = "56px 'Senty Golden Bell 新蒂金钟体'";
+        ctx.font = "bold 56px 'Senty Golden Bell 新蒂金钟体'";
         ctx.fillText(authorName, 498, 239);
         ctx.fillStyle = '#92969c';
         ctx.font = "bold 30px '宋体'";
